@@ -11,7 +11,7 @@ import {lowerCases, numbers, specials, upperCases} from "./lib/stores.js";
 <main>
     <SettingsWrapper>
         <Setting>
-            <Slider />
+            <Slider label="Length" />
         </Setting>
         <Setting>
             <Character label='Lower Case Letters' bind:characters={$lowerCases} />

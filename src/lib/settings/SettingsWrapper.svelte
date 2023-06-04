@@ -11,5 +11,7 @@
 
         height: 100vh;
         width: 60vw;
+
+        margin: 1rem;
     }
 </style>

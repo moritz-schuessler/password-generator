@@ -1,8 +1,9 @@
 <script>
     import {length} from "../stores.js";
-
+    export let label
 </script>
 
+{label}
 <label for='length'>
     {$length}
 </label>

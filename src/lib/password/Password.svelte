@@ -13,7 +13,18 @@
     }
 </script>
 
-{password}
+<div>
+    {password}
+</div>
+
+<style>
+    div {
+        padding: 2rem;
+        overflow-wrap: anywhere;
+        text-align: center;
+        hyphens: none;
+    }
+</style>
 
 
 

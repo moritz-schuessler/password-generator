@@ -14,3 +14,14 @@
             bind:value={$length}
     >
 </div>
+
+<style>
+    div {
+        display: flex;
+        justify-content: space-between
+    }
+    input {
+        width: 95%;
+    }
+</style>
+

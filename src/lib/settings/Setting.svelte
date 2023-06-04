@@ -1,10 +1,15 @@
-
-<div>
-    <slot></slot>
+<script>
+    let items;
+</script>
+<div class="wrapper">
+    <slot name="label"></slot>
+    <div class="setting">
+        <slot name="setting"></slot>
+    </div>
 </div>
 
 <style>
-    div {
+    .wrapper {
         color: rgb(25,25,25);
         background-color: rgba(225,225,225, 1);
 
@@ -15,4 +20,10 @@
         padding: 1rem;
         margin: 1rem;
     }
+
+    .setting {
+        display: flex;
+        flex-direction: column;
+    }
+
 </style>

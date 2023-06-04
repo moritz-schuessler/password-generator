@@ -11,19 +11,23 @@ import {lowerCases, numbers, specials, upperCases} from "./lib/stores.js";
 <main>
     <SettingsWrapper>
         <Setting>
-            <Slider label="Length" />
+            <div slot="label">Letters</div>
+            <svelte:fragment slot="setting">
+                <Character bind:characters={$lowerCases} />
+                <Character bind:characters={$upperCases} />
+            </svelte:fragment>
         </Setting>
         <Setting>
-            <Character label='Lower Case Letters' bind:characters={$lowerCases} />
+            <div slot="label">Numbers</div>
+            <Character slot="setting" bind:characters={$numbers} />
         </Setting>
         <Setting>
-            <Character label='Upper Case Letters' bind:characters={$upperCases} />
+            <div slot="label">Special Characters</div>
+            <Character slot="setting" bind:characters={$specials} />
         </Setting>
         <Setting>
-            <Character label='Numbers' bind:characters={$numbers} />
-        </Setting>
-        <Setting>
-            <Character label='Special Characters' bind:characters={$specials} />
+            <div slot="label">Length</div>
+            <Slider slot="setting" label="Length" />
         </Setting>
     </SettingsWrapper>
     <PasswordWrapper>
@@ -36,5 +40,4 @@ import {lowerCases, numbers, specials, upperCases} from "./lib/stores.js";
     main {
         display: flex;
     }
-
 </style>

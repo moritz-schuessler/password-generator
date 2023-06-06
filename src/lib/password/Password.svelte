@@ -15,8 +15,16 @@
 </script>
 
 <div class="wrapper">
-    <div class="password">
-        {password}
+    <div class="password-wrapper">
+        <div class="password">
+            {password}
+        </div>
+        <button
+            class="copyPassword"
+            on:click={() => navigator.clipboard.writeText(password)}
+        >
+            Copy Password
+        </button>
     </div>
     <button
             class="newPassword"

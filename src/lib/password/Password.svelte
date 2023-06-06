@@ -40,6 +40,8 @@
         flex-direction: column;
         justify-content: space-between;
 
+        gap: 2rem;
+
         height: 100%;
 
         padding: 2rem;
@@ -48,12 +50,24 @@
         hyphens: none;
     }
 
-    .password {
+    .password-wrapper {
         display: flex;
+        height: 100%;
+    }
+
+    .password {
+        background-color: rgba(225,225,225,0.1);
+
+        display: flex;
+        flex-basis: 85%;
         align-items: center;
         justify-content: center;
 
+        border-radius: 4px 0 0 4px;
+
         height: 100%;
+
+        padding: 1rem;
     }
 
     button {
@@ -61,7 +75,7 @@
         background-color: rgb(225,225,225);
 
         border: none;
-        border-radius: 5px;
+        border-radius: 4px;
 
         padding: 1rem;
     }
@@ -72,6 +86,16 @@
 
     button:active {
         background-color: rgba(225,225,225,0.7);
+    }
+
+    .copyPassword {
+        flex-basis: 15%;
+
+        border-radius: 0 4px 4px 0;
+
+        height: 100%;
+        width: 8rem;
+        min-width: 4rem;
     }
 </style>
 

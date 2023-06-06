@@ -14,12 +14,20 @@
     }
 </script>
 
-<div>
-    {password}
+<div class="wrapper">
+    <div class="password">
+        {password}
+    </div>
+    <button
+            class="newPassword"
+            on:click={() => password = generatePassword($length, $characters)}
+    >
+    Generate new Password
+    </button>
 </div>
 
 <style>
-    div {
+    .wrapper {
         padding: 2rem;
         overflow-wrap: anywhere;
         text-align: center;

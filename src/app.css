@@ -20,6 +20,13 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
 body {
+  height: 100%;
+  overflow: auto;
   margin: 0;
 }

@@ -5,7 +5,6 @@
 
     const generatePassword = (length, characters) => {
         let temp = '';
-        console.log(characters)
         for (let i = 0; i < length; i++) {
             const charAt = Math.floor(Math.random() * characters.length);
             temp += characters.charAt(charAt);

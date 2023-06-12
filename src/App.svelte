@@ -5,7 +5,7 @@ import SettingsWrapper from "./lib/settings/SettingsWrapper.svelte";
 import Setting from "./lib/settings/Setting.svelte";
 import Slider from "./lib/settings/Slider.svelte";
 import Character from "./lib/settings/Character.svelte";
-import {lowerCases, numbers, specials, upperCases} from "./lib/stores.js";
+import {lowerCases, upperCases, numbers, specials} from "./lib/stores.js";
 </script>
 
 <main>

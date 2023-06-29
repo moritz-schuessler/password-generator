@@ -1,6 +1,6 @@
 # Password Generator
 
-This Repository contains a Project where I develeoped a Password-Generator to create random Passwords. This Password Generator has options to toggle characters and change the length in the Web App.
+This Repository contains a Project where I developed a password generator to create random passwords. This password generator has options to toggle characters and change the length of the password.
 
 This Password Generator was built using Svelte and Vite.
 

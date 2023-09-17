@@ -24,8 +24,6 @@
     }
 
     .character {
-        all: unset;
-
         color: hsl(var(--lightColor));
         background-color: hsla(var(--darkColor), 1);
 

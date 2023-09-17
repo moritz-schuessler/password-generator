@@ -3,8 +3,8 @@
   --lightColor: 0, 0%, 95%;
   --accentColor: 39, 87% ,59%;
 
-  --passwordWidth: 40dvw;
   --settingsWidth: 60dvw;
+  --passwordWidth: 40dvw;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -36,4 +36,8 @@ body {
 button {
   all: unset;
   box-sizing: border-box;
+}
+
+*:focus {
+  outline: solid 2px hsla(var(--accentColor), .3);
 }

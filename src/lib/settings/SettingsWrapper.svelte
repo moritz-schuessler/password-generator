@@ -8,11 +8,12 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        gap: 1rem;
 
-        height: 100vh;
-        width: 60vw;
+        height: 100%;
+        width: var(--settingsWidth);
+        gap: 2rem;
 
-        padding: 1rem;
+        overflow: scroll;
+        overscroll-behavior: none;
     }
 </style>

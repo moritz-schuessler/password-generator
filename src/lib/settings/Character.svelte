@@ -9,22 +9,25 @@
 
 <div class="wrapper">
     {#each characters as {character, isToggled}}
-        <div id={character} on:click={toggle} class="character {isToggled?'enabled':'disabled'}">
+        <button id={character} on:click={toggle} class="character {isToggled?'enabled':'disabled'}">
             {character}
-        </div>
+        </button>
     {/each}
 </div>
 
 <style>
     .wrapper {
         display: flex;
-        justify-content: flex-start;
-        column-gap: 5px;
+        justify-content: start;
+        flex-wrap: wrap;
+        gap: 5px;
     }
 
     .character {
-        color: #e1e1e1;
-        background-color: #191919  ;
+        all: unset;
+
+        color: hsl(var(--lightColor));
+        background-color: hsla(var(--darkColor), 1);
 
         display: flex;
         justify-content: center;
@@ -32,27 +35,21 @@
 
         width: 2rem;
         height: 2rem;
+
+        border-radius: 3px;
+    }
+
+    .character:hover {
+        background-color: hsla(var(--darkColor), .6);
     }
 
     .enabled {
-        background-color: rgb(25,25,25,0.8);
+        background-color: hsla(var(--darkColor), .9);
     }
 
     .disabled {
-        background-color: rgb(25,25,25,0.3);
-        color: rgb(25,25,25);
-    }
-
-    input {
-        color: rgb(25,25,25);
-        background-color: rgb(25,25,25,0.4);
-
-        border: none;
-        border-radius: 3px;
-
-        padding: 5px;
-
-        width: 100%;
+        background-color: hsla(var(--darkColor), .3);
+        color: hsla(var(--lightColor));
     }
 </style>
 

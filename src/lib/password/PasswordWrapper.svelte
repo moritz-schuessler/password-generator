@@ -1,4 +1,3 @@
-
 <div>
     <slot></slot>
 </div>
@@ -9,7 +8,7 @@
         align-items: center;
         justify-content: center;
 
-        height: 100vh;
-        width: 40vw;
+        height: 100%;
+        width: var(--passwordWidth)
     }
 </style>

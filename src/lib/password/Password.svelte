@@ -42,8 +42,8 @@
         gap: 2rem;
 
         height: 100%;
+        width: 100%;
 
-        padding: 2rem;
         overflow-wrap: anywhere;
         text-align: center;
         hyphens: none;
@@ -52,10 +52,12 @@
     .password-wrapper {
         display: flex;
         height: 100%;
+
+        border-radius: 4px;
     }
 
     .password {
-        background-color: rgba(225,225,225,0.1);
+        background-color: hsla(var(--lightColor), .1);
 
         display: flex;
         flex-basis: 85%;
@@ -70,21 +72,17 @@
     }
 
     button {
-        color: rgb(25,25,25);
-        background-color: rgb(225,225,225);
+        color: hsl(var(--lightColor));
+        background-color: hsla(var(--lightColor), .1);
 
-        border: none;
         border-radius: 4px;
 
         padding: 1rem;
     }
 
-    button:hover {
-        background-color: rgba(225,225,225,0.8);
-    }
-
-    button:active {
-        background-color: rgba(225,225,225,0.7);
+    button:hover, button:active {
+        background-color: hsla(var(--lightColor), .2);
+        color: hsl(var(--lightColor));
     }
 
     .copyPassword {

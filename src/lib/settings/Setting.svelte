@@ -12,20 +12,18 @@
 
 <style>
     .wrapper {
-        color: rgb(25,25,25);
-        background-color: rgba(225,225,225, 1);
-
         display: flex;
         flex-direction: column;
         justify-content: space-between;;
 
-        border-radius: 4px;
-
         width: 100%;
         height: 100%;
-
         padding: 1rem;
-        margin: 1rem;
+
+        color: hsl(var(--lightColor));
+        background-color: hsla(var(--lightColor), .1);
+
+        border-radius: 4px;
     }
 
     .label {

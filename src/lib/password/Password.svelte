@@ -14,23 +14,23 @@
 </script>
 
 <div class="wrapper">
-    <div class="password-wrapper">
-        <div class="password">
-            {password}
-        </div>
+    <div class="password">
+        {password}
+    </div>
+    <div class="actions">
         <button
-            class="copyPassword"
-            on:click={() => navigator.clipboard.writeText(password)}
+                class="newPassword"
+                on:click={() => password = generatePassword($length, $characters)}
+        >
+            Generate new Password
+        </button>
+        <button
+                class="copyPassword"
+                on:click={() => navigator.clipboard.writeText(password)}
         >
             Copy Password
         </button>
     </div>
-    <button
-            class="newPassword"
-            on:click={() => password = generatePassword($length, $characters)}
-    >
-    Generate new Password
-    </button>
 </div>
 
 <style>
@@ -39,62 +39,53 @@
         flex-direction: column;
         justify-content: space-between;
 
+        height: 100%;
+        width: 100%;
+        padding: 1rem;
         gap: 2rem;
 
-        height: 100%;
+        background-color: hsla(var(--lightColor), .1);
 
-        padding: 2rem;
+        border-radius: 4px;
+    }
+
+    .actions {
+        display: flex;
+
+        gap: 1rem;
+    }
+
+    .password {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 100%;
+        padding: 1rem;
+
+        border-radius: 4px 0 0 4px;
+
         overflow-wrap: anywhere;
         text-align: center;
         hyphens: none;
     }
 
-    .password-wrapper {
-        display: flex;
-        height: 100%;
-    }
-
-    .password {
-        background-color: rgba(225,225,225,0.1);
-
-        display: flex;
-        flex-basis: 85%;
-        align-items: center;
-        justify-content: center;
-
-        border-radius: 4px 0 0 4px;
-
-        height: 100%;
-
-        padding: 1rem;
-    }
-
     button {
-        color: rgb(25,25,25);
-        background-color: rgb(225,225,225);
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        border: none;
+        color: hsl(var(--lightColor));
+        background-color: hsla(var(--darkColor), .9);
+
         border-radius: 4px;
 
+        width: 100%;
         padding: 1rem;
     }
 
-    button:hover {
-        background-color: rgba(225,225,225,0.8);
-    }
-
-    button:active {
-        background-color: rgba(225,225,225,0.7);
-    }
-
-    .copyPassword {
-        flex-basis: 15%;
-
-        border-radius: 0 4px 4px 0;
-
-        height: 100%;
-        width: 8rem;
-        min-width: 4rem;
+    button:hover, button:active {
+        background-color: hsla(var(--darkColor), .6);
     }
 </style>
 

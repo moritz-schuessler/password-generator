@@ -39,5 +39,14 @@ import {lowerCases, upperCases, numbers, specials} from "./lib/stores.js";
 <style>
     main {
         display: flex;
+
+        height: 100dvh;
+        width: 100dvw;
+
+        padding: 2rem;
+        gap: 2rem;
+
+        color: hsl(var(--lightColor));
+        background-color: hsl(var(--darkColor));
     }
 </style>

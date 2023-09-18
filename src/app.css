@@ -1,13 +1,14 @@
 :root {
+  --darkColor: 0, 0%, 5%;
+  --lightColor: 0, 0%, 95%;
+  --accentColor: 39, 87% ,59%;
+
+  --settingsWidth: 60dvw;
+  --passwordWidth: 40dvw;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  box-sizing: border-box;
-
-  color-scheme: light dark;
-  color: rgb(225,225,225);
-  background-color: rgb(25,25,25);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,17 +17,27 @@
   -webkit-text-size-adjust: 100%;
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 html {
-  overflow: hidden;
-  height: 100%;
+  color-scheme: dark;
+  overscroll-behavior: none;
 }
 
 body {
-  height: 100%;
-  overflow: auto;
   margin: 0;
+
+  color: hsl(var(--lightColor));
+  background-color: hsl(var(--darkColor));
+}
+
+button {
+  all: unset;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: solid 2px hsla(var(--accentColor), .3);
 }
